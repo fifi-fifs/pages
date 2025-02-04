@@ -1,23 +1,27 @@
+#  ##   ###
+#  Import LIBRARIES
 import flet as ft
-from flet import Page, Container, Text, AppBar
+from flet import Page
 
-def main(page:Page):
-	page.appbar = AppBar(title=Text("New app!!!"))
-	page.add(
-		Container(
-			bgcolor="red",
-			padding=10,
-			alignment=ft.alignment.center,
-			content=Text("hello",size=30,weight="bold"),
-			),
-		Container(
-			bgcolor="blue",
-			padding=10,
-			alignment=ft.alignment.center,
-			content=Text("mum!",size=50,weight="bold"),
-			),
-		),
-	
+#  Import FILES
+from user_controls.app_bar import NavBar
+from views.FletRouter import Router
+
+#  ##   ###
+def main(page: Page):
+    page.title = "Sofia Responsive Website using Python's Flet"
+
+    page.theme_mode = "dark"
+
+    page.appbar = NavBar(page)
+    myRouter = Router(page)
+
+    page.on_route_change = myRouter.route_change
+
+    page.add(myRouter.body)
+
+    page.go("/")
+
 
 if __name__ == "__main__":
-	ft.app(main)
+    ft.app(target=main, assets_dir="assets")
