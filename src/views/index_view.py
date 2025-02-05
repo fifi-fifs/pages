@@ -31,18 +31,20 @@ def IndexView(page):
 
     #  A clickable icon button to move to contacts
     contact_button = ElevatedButton(
-        content=Text("Contacts", size=22, color=Colors.AMBER_500),
+        width=155, 
+        height=28,
+        content=Text(value="Contact Me", size=22, color=Colors.AMBER_500,bgcolor=Colors.GREY_800),
         # text="Contacts",
         # icon=Icons.CONTACT_PAGE,
-        # on_click=lambda e: page.go("/contact"),  # Replace with your contact page route
-        on_click=lambda e: print("Contacts"),
+        on_click=lambda e: page.go("/contacts"),  # Replace with your contact page route
+        # on_click=lambda e: print("Contacts"),
     )
 
     #  IMAGE -  Righthandside
     home_image = Image(
-        src="assets/harvard_library.jpg",
-        width=300,  # Adjust width as needed
-        height=300,  # Adjust height as needed
+        src="harvard_library.jpg",
+        width=600,  # Adjust width as needed
+        height=500,  # Adjust height as needed
         fit=ft.ImageFit.CONTAIN,
     )
 
@@ -52,21 +54,25 @@ def IndexView(page):
     page_content = Column(
         alignment="center",   #MainAxisAlignment.CENTER,
         expand=True,
-        # content=Text("Hello Mum!"),
         controls=[    
             Row(
+                alignment=MainAxisAlignment.SPACE_EVENLY ,
                 expand=True,
-                vertical_alignment="center",
+                # vertical_alignment="center",
                 controls=[
                     Column(
                         alignment="center",  #MainAxisAlignment.CENTER,
-                        
                         spacing=35,
                         controls=[
-                        citation_text, 
-                        author_text,
-                        Container(height=30),
-                        contact_button,
+                            citation_text, 
+                            author_text,
+                            Container(height=30),
+                            Row(
+                                alignment=MainAxisAlignment.CENTER,
+                                controls=[
+                                    contact_button,
+                                ],
+                            ),
                         ],
                         
                     ),

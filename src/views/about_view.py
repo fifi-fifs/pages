@@ -12,8 +12,7 @@ def AboutView(page):
 
     #  Image on the righthandside
     image = Image(
-        src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        # src="https://via.placeholder.com/150",  # Replace with your image URL
+        src="mun.png",  # Replace with your image URL
         width=300,
         height=300,
         fit=ft.ImageFit.CONTAIN,

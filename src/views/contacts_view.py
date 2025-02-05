@@ -1,7 +1,7 @@
 #  ##   ###
 #  Import LIBRARIES
 import flet as ft
-from flet import Text, TextField, ElevatedButton,Column,Row ,Colors,Icons
+from flet import Text, TextField, ElevatedButton,Column,Row ,Colors,Icons,Container
 
 #  Import FILES
 #  ##   ###
@@ -16,9 +16,13 @@ def ContactsView(page: ft.Page):
         alignment="centre",
         controls=[
             Text("Contact Me", style=ft.TextStyle(size=30)),
-            TextField(label="Name", icon=Icons.PERSON),
-            TextField(label="Email", icon=Icons.EMAIL), 
-            TextField(label="Message", multiline=True, icon=Icons.MESSAGE, border=Colors.AMBER),
+            Container(height=20),
+            TextField(label="Name", icon=Icons.PERSON, border_color=Colors.AMBER),
+            Container(height=20),
+            TextField(label="Email", icon=Icons.EMAIL, border_color=Colors.AMBER), 
+            Container(height=20),
+            TextField(label="Message", multiline=True, icon=Icons.MESSAGE, border_color=Colors.AMBER),
+            Container(height=30),
             Row(
                 alignment="end",
                 controls=[
