@@ -7,12 +7,13 @@ from flet import Column, ElevatedButton, Icons, Image, Row, Text
 #  ##   ###
 
 
-def CodingView(page):
-    page.title = "Neuroscience Society"
+def VolunteeringView(page):
+    page.title = "Volunteering"
 
     #  Image on the righthandside
     image = Image(
-        src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src="https://plus.unsplash.com/premium_photo-1664372145541-4556b409492e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        # src="https://via.placeholder.com/150",  # Replace with your image URL
         width=300,
         height=300,
         fit=ft.ImageFit.CONTAIN,
@@ -20,20 +21,11 @@ def CodingView(page):
 
     # Text for the left handside
     text_one = Text(
-        "In my free time, I enjoy coding and even built this website myself.",
+        "I am the head and founder of the Neuroscience Society, where I lead discussions on research, invite guest speakers, and connect neuroscience with other disciplines.",
         width=300,
     )
     text_two = Text(
-        "Recently, I completed the 100 Days of Python challenge, avery hard coding course which strengthened my problem-solving skills and deepened my understanding of programming.",
-        width=300,
-    )
-
-    text_three = Text(
-        "This website is a direct result of the above course. In addition this course inspired me to write articles and my EPQ.",
-        width=300,
-    )
-    text_four = Text(
-        "Learning about data science has been particularly valuable, as it has helped me analyze neuroscience data more effectively. By applying coding to neuroscience, I can explore complex patterns in brain activity and behavior.",
+        "To spread awareness, I have written various articles for the school magazine. To access my articles click the button below.",
         width=300,
     )
 
@@ -58,8 +50,7 @@ def CodingView(page):
                         controls=[
                             text_one,
                             text_two,
-                            text_three,
-                            text_four,
+                            pdf_button,
                         ],
                     ),
                     image,

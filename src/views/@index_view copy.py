@@ -31,9 +31,8 @@ def IndexView(page):
 
     #  A clickable icon button to move to contacts
     contact_button = ElevatedButton(
-        content=Text("Contacts", size=22, color=Colors.AMBER_500),
-        # text="Contacts",
-        # icon=Icons.CONTACT_PAGE,
+        icon=Icons.CONTACT_PAGE,
+        text="Contacts",
         # on_click=lambda e: page.go("/contact"),  # Replace with your contact page route
         on_click=lambda e: print("Contacts"),
     )
@@ -49,37 +48,32 @@ def IndexView(page):
 
 
     #  Page content rendering
-    page_content = Column(
-        alignment="center",   #MainAxisAlignment.CENTER,
+    page_content = Container(
         expand=True,
         # content=Text("Hello Mum!"),
-        controls=[    
-            Row(
-                expand=True,
-                vertical_alignment="center",
+        bgcolor=Colors.RED,
+        content=Row(
+            expand=True,
+            controls=[
+            
+            Column(
+                alignment=MainAxisAlignment.CENTER,
+                spacing=35,
                 controls=[
-                    Column(
-                        alignment="center",  #MainAxisAlignment.CENTER,
-                        
-                        spacing=35,
-                        controls=[
-                        citation_text, 
-                        author_text,
-                        Container(height=30),
-                        contact_button,
-                        ],
-                        
-                    ),
+                citation_text, 
+                author_text,
                 
-                # Text("Hello Mum!"),
-                home_image
-
-
-                ], 
-        
+                contact_button,
+                ],
             ),
-        ],
+            
+            # Text("Hello Mum!"),
+            home_image
 
+
+        ], 
+        
+        ),
         
        
        

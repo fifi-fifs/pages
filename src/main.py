@@ -8,8 +8,16 @@ from user_controls.app_bar import NavBar
 from views.FletRouter import Router
 
 #  ##   ###
+
+
+
 def main(page: Page):
     page.title = "Sofia Responsive Website using Python's Flet"
+
+    page.horizontal_alignment = "center"
+    page.vertical_alignment = "center"
+    page.padding = 40
+
 
     page.theme_mode = "dark"
 

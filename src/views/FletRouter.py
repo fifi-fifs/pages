@@ -9,7 +9,10 @@ from views.coding_view import CodingView
 from views.index_view import IndexView
 from views.music_view import MusicView
 from views.neuro_view import NeuroView
-from views.settings_view import SettingsView
+from views.volunteering_view import VolunteeringView
+from views.contacts_view import ContactsView
+# from views.contacts_view import SettingsView
+
 
 #  ##   ###
 
@@ -21,10 +24,12 @@ class Router:
         self.routes = {
             "/": IndexView(page),
             "/about": AboutView(page),
-            "/coding": CodingView(page),
             "/music": MusicView(page),
             "/neuroscience": NeuroView(page),
-            "/settings": SettingsView(page),
+            "/coding": CodingView(page),
+            "/volunteering": VolunteeringView(page),
+            "/contacts": ContactsView(page),
+            
         }
         self.body = ft.Container(content=self.routes["/"])
 

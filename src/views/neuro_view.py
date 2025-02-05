@@ -8,7 +8,7 @@ from flet import Column, ElevatedButton, Icons, Image, Row, Text
 
 
 def NeuroView(page):
-    page.title = "Neuroscience Society"
+    page.title = "Neuroscience"
 
     #  Image on the righthandside
     image = Image(
