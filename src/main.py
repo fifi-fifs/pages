@@ -8,6 +8,7 @@ from user_controls.app_bar import NavBar
 from views.FletRouter import Router
 
 #  ##   ###
+# TODO: add LinkedIn, Instagram, tictok, etc. 
 
 
 

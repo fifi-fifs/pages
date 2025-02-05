@@ -1,3 +1,4 @@
+
 # ##   ###
 #  Import LIBRARIES
 import flet as ft
@@ -12,7 +13,7 @@ from flet import (
     MainAxisAlignment,
     Row,
     Text,
-    Container,TextButton,Page
+    Container,TextButton,Page,TextSpan,
 )
 
 
@@ -20,6 +21,10 @@ from flet import (
 #  ##   ###
 
 
+
+
+#  Center title - switched off at this time
+# _center_title=ft.Text(""),center_title=False,
 
 def toggle_dark_mode(e):
     if page.theme_mode == "dark":
@@ -37,12 +42,13 @@ def NavBar(page: Page):
             controls=[
                 Container(width=30),
                 Icon(Icons.TAG_FACES_ROUNDED),
-                Text("  Sof", weight="bold", size=22),
-                Text("IA", weight="italics", size=22, color=Colors.ORANGE_500),
+                Text("  Sof", weight="bold", size=22, spans=[
+                    TextSpan("IA", ft.TextStyle(weight="Italic", color=Colors.ORANGE_500,),),
+                ]),
             ],
         ),
         leading_width=40,
-        # title=ft.Text(""),center_title=False,
+        # title=_center_title,
         bgcolor=ft.colors.SURFACE_CONTAINER_HIGHEST,
         actions=[
             Row(
@@ -66,18 +72,3 @@ def NavBar(page: Page):
 
     return NavBar
 
-
-            # ElevatedButton("Home", on_click=lambda _: page.go("/")),
-            # Container(width=10),
-            # ElevatedButton("About", on_click=lambda _: page.go("/about")),
-            # Container(width=10),
-            # ElevatedButton("Music", on_click=lambda _: page.go("/music")),
-            # Container(width=10),
-            # ElevatedButton("Neuroscience", on_click=lambda _: page.go("/neuroscience")),
-            # Container(width=10),
-            # ElevatedButton("Coding", on_click=lambda _: page.go("/coding")),
-            # Container(width=10),
-            # ElevatedButton("Volunteering", on_click=lambda _: page.go("/volunteering")),
-            # Container(width=10),
-            # ElevatedButton("Contacts"),
-            # Container(width=10),
